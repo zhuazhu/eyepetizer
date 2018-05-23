@@ -1,11 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/transparent_000</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="title_bar_style">@style/TitleBarStyle</item>
+    </style>
+    <style name="TitleBarStyle">
+        <item name="frame_title_background_color">@color/c_fff</item>
+        <item name="frame_title_title_color">@color/c_fff</item>
+        <item name="frame_title_menu_text_color">@color/c_fff</item>
+        <item name="frame_title_menu_text_size">15sp</item>
+        <item name="frame_title_title_size">18sp</item>
     </style>
 
 </resources>
