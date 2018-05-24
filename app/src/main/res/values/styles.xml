@@ -5,7 +5,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/transparent_000</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/transparent_200</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="title_bar_style">@style/TitleBarStyle</item>
     </style>

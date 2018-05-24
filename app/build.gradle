@@ -57,12 +57,15 @@ dependencies {
     implementation "com.android.support:design:${support_version}"
     implementation("com.github.zhuazhu.MFrame:library:${frame_version}", {
         exclude group: 'com.android.support'
-        exclude group: "com.scwang.smartrefresh"
         exclude group: "com.google.zxing"
     })
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
     implementation "com.github.zhuazhu.MFrame:annotation:${frame_version}"
     annotationProcessor "com.github.zhuazhu.MFrame:compiler:${frame_version}"
     annotationProcessor 'com.google.dagger:dagger-compiler:2.15'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //播放器
+    implementation 'com.shuyu:GSYVideoPlayer:4.1.3'
 }

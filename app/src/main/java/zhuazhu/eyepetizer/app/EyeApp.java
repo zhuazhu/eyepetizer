@@ -8,9 +8,13 @@ import conm.zhuazhu.common.utils.Utils;
 import mejust.frame.annotation.TitleBarMenuLocation;
 import mejust.frame.app.AppConfig;
 import mejust.frame.app.ConfigInterface;
+import mejust.frame.di.module.AppModule;
 import mejust.frame.widget.title.TitleBarSetting;
 import zhuazhu.eyepetizer.BuildConfig;
 import zhuazhu.eyepetizer.R;
+import zhuazhu.eyepetizer.di.component.AppComponent;
+import zhuazhu.eyepetizer.di.component.DaggerAppComponent;
+import zhuazhu.eyepetizer.di.module.DataModule;
 
 /**
  * @author zhuazhu
@@ -21,6 +25,17 @@ public class EyeApp extends Application implements ConfigInterface{
     public void onCreate() {
         super.onCreate();
         AppConfig.init(this,this);
+    }
+    private static AppComponent appComponent;
+
+    public static AppComponent getAppComponent() {
+        if (appComponent == null) {
+            appComponent = DaggerAppComponent.builder()
+                    .appModule(new AppModule(Utils.getApp()))
+                    .dataModule(new DataModule())
+                    .build();
+        }
+        return appComponent;
     }
 
     @Override
